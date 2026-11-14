@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide default cursor on desktop to display Luxury Magnetic Ring Cursor */
+@media (pointer: fine) {
+  *, button, a, input, select {
+    cursor: none !important;
+  }
+}
+
+html {
+  background-color: #0c0c0e;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: #0c0c0e;
+  color: #e8e6e3;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  min-height: 800vh;
+}
+
+.font-display-luxury {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Glassmorphism Cards */
+.luxury-card {
+  background: rgba(18, 18, 22, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.luxury-card-gold {
+  background: rgba(20, 20, 25, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+#hero-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+  background: #000000;
+}
+
+/* Custom Cursor Animations */
+@keyframes cursorRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.4);
+    opacity: 0;
+  }
+}
+
+.cursor-ripple-anim {
+  animation: cursorRipple 0.45s ease-out forwards;
+}
+
+@keyframes cursorGlowFlash {
+  0% {
+    opacity: 0.35;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.6);
+  }
+}
+
+.cursor-glow-anim {
+  animation: cursorGlowFlash 0.35s ease-out forwards;
+}

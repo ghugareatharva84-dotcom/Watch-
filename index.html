@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ATHARVA — Swiss Horology & Timeless Craftsmanship</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#f3e5ab',
+              400: '#e6c875',
+              500: '#d4af37',
+              600: '#b58f27',
+              700: '#8e6d19',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'serif'],
+            display: ['Cinzel', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-[#0c0c0e] text-[#e8e6e3] antialiased selection:bg-[#d4af37]/30 selection:text-[#f8f6f0]">
+  <!-- Fixed Background Canvas for 300-Frame 3D Watch Animation -->
+  <div id="watch-canvas-wrapper" class="fixed inset-0 z-0 pointer-events-none transition-transform duration-100 ease-out">
+    <canvas id="hero-canvas" class="w-full h-full object-cover"></canvas>
+  </div>
+
+  <!-- Page Content Container -->
+  <div id="app" class="relative z-10 min-h-[800vh]"></div>
+
+  <script src="./main.js" defer></script>
+</body>
+</html>
+
